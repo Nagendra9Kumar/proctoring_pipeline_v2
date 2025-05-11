@@ -30,20 +30,7 @@
     <h1>On-device Proctoring (MediaPipe)</h1>
     <video id="video" autoplay muted playsinline></video>
     <div id="alerts"></div>
-    <button id="start-camera">Start Camera</button>
-    <script>
-        document.getElementById('start-camera').addEventListener('click', async () => {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                video.srcObject = stream;  // Assuming 'video' is your video element
-                console.log("Camera permission granted");
-            } catch (err) {
-                console.log("Error accessing camera:", err);
-            }
-        });
-    </script>
-
-
+    <script type="module" src="./script.js"></script>
 </body>
 
 </html>

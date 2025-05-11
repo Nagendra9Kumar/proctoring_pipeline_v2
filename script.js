@@ -1,4 +1,3 @@
-
 import {
   ObjectDetector,
   FilesetResolver,
@@ -151,8 +150,6 @@ async function initCamera() {
   camera = new Camera(video, {
       onFrame: async () => {
           await faceMesh.send({ image: video });
-          // await hands.send({ image: video });
-
           let now = performance.now();
           if (video.currentTime !== lastVideoTime) {
               lastVideoTime = video.currentTime;
@@ -165,6 +162,7 @@ async function initCamera() {
   });
 
   camera.start();
+
  
 }
 
@@ -172,9 +170,7 @@ async function initCamera() {
 
 async function startApp() {
   initFaceMesh();
-
   objectDetector = await initializeObjectDetector();
-  
   await initCamera();
 
 }
@@ -182,3 +178,4 @@ async function startApp() {
 
 // Kick things off
 startApp();
+
