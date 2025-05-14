@@ -2,35 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>MediaPipe Proctoring</title>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+    <meta charset="UTF-8" />
+    <title>MediaPipe Proctoring Test</title>
     <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-        }
-
         video {
             width: 640px;
-            border: 2px solid black;
+            height: 480px;
+            border: 2px solid #333;
         }
 
         #alerts {
+            font-size: 1.2rem;
             color: red;
-            font-weight: bold;
-            margin-top: 10px;
+            margin-top: 1rem;
         }
     </style>
 </head>
 
 <body>
-    <h1>On-device Proctoring (MediaPipe)</h1>
     <video id="video" autoplay muted playsinline></video>
-    <div id="alerts"></div>
-    <script type="module" src="./script.js"></script>
+    <div id="alerts">No Voliations Detected </div>
+    <button id="start-button" type="button">Start</button>
+    <script src="./script.js" type="module" />
 </body>
 
 </html>
